@@ -1,0 +1,25 @@
+<h1>Tic Tac Toe</h1>
+<p class="alert-success">{{turn}}</p>
+<p class="alert-danger">{{gameLog}}</p>
+<table *ngIf="!finished">
+  <tr>
+      <td *ngFor="let cell of cells.slice(0,3)" [id]="cell.id" class="cell" (click)="markCell(cell.id)">
+        <p *ngIf="cell.player === 'player1'">o</p>
+        <p *ngIf="cell.player === 'player2'">x</p>
+      </td>
+  </tr>
+  <tr>
+      <td *ngFor="let cell of cells.slice(3,6)" [id]="cell.id" class="cell" (click)="markCell(cell.id)">
+        <p *ngIf="cell.player === 'player1'">o</p>
+        <p *ngIf="cell.player === 'player2'">x</p>
+      </td>
+  </tr>
+  <tr>
+    <td *ngFor="let cell of cells.slice(6,9)" [id]="cell.id" class="cell" (click)="markCell(cell.id)">
+      <p *ngIf="cell.player === 'player1'">o</p>
+      <p *ngIf="cell.player === 'player2'">x</p>
+    </td>
+  </tr>
+</table>
+<br/><br/>
+<br/><br/>

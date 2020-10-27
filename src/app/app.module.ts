@@ -6,7 +6,8 @@ import {PageOneComponent} from './page-one/page-one.component';
 import {PageTwoComponent} from './page-two/page-two.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {RouterModule} from '@angular/router';
-import { ChFontComponent } from './ch-font/ch-font.component';
+import {ChFontComponent} from './ch-font/ch-font.component';
+import {TicTacToeComponent} from './tic-tac-toe/tic-tac-toe.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,15 @@ import { ChFontComponent } from './ch-font/ch-font.component';
     PageOneComponent,
     PageTwoComponent,
     NavbarComponent,
-    ChFontComponent
+    ChFontComponent,
+    TicTacToeComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path: 'page-one', component: PageOneComponent},
-      {path: 'page-two', component: PageTwoComponent}
+      {path: 'page-two', component: PageTwoComponent},
+      {path: 'page-three', component: TicTacToeComponent}
     ])
   ],
   providers: [],
